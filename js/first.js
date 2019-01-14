@@ -1,60 +1,40 @@
-﻿var app111 = new Vue({
-    el: '#app',
-    data: {
-        message: 'Hell2222o Vue!',
-        nihao:'sdfsdfsdf'
+﻿var app = new Vue({
+    el:"#app",
+    data:{
+        number:100,
+        isok:true,
+        text:"东方通信股份有限公司",
+        date:new Date,
+        url:"http://wwww.eastcom.com",
     }
-});
-var app = new Vue({
-    el: '#app-2',
-    data: {
-        message: '页面加载于 ' + new Date().toLocaleString(),
-    }
-});
-var app3 = new Vue({
-    el: '#app-3',
-    data: {
-        seen:true
-    }
-});
-var app4 = new Vue({
-    el: '#app-4',
-    data: {
-      todos: [
-        { text: '学习 JavaScript' },
-        { text: '学习 Vue' },
-        { text: '学习 JavaScript' },
-        { text: '学习 Vue' },
-        { text: '学习 JavaScript' },
-        { text: '学习 Vue' },
-        { text: '学习 JavaScript' },
-        { text: '学习 Vue' },
-        { text: '学习 JavaScript' },
-        { text: '学习 Vue' },
-        { text: '学习 JavaScript' },
-        { text: '学习 Vue' },
-        { text: '学习 JavaScript' },
-        { text: '学习 Vue' },
-        { text: '整个牛项目' }
-      ]
-    }
-  });
-
-  var app5 = new Vue({
-    el: '#app-5',
-    data: {
-      message: 'Hello Vue.js!'
+    ,
+    filters:{
+        formatDate:function(val){
+            var date = new Date(val);
+            var year = date.getFullYear();
+            return year;
+        }
     },
     methods: {
-      reverseMessage: function () {
-        this.message = this.message.split('').reverse().join('')
-      }
-    }
-  });
-  
-  var app6 = new Vue({
-    el: '#app-6',
-    data: {
-      message: 'Hello Vue!'
-    }
+        handler:function(url,arg){
+            alert(url);
+        }
+    },
 });
+
+var appx = new Vue({
+    el:"#app1",
+    data:{
+        message:"121123123123"
+    }
+})
+
+var app2x = new Vue({
+    el:"#app2",
+    data:{type:'name'},
+    methods:{
+        handleToggleClick:function(){
+            this.type=this.type==='name'?'mail':'name';
+        }
+    }
+})
