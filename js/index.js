@@ -18,8 +18,9 @@ var app = new Vue({
         }
     },
     methods: {
-        handleClick:function(index,method){
+        handleClick:function(index,method){     
             var item = this.list[index];
+            if(method==-1&& item.count==1) return;
             item.count+=method;
         },
         handleRemove:function(index){
