@@ -7,30 +7,11 @@
     </head>
     <body>
         <div id="app" v-cloak>
-            <template v-if="list.length">
-                <table>
-                    <thead>
-                        <tr>
-                            <td></td>
-                            <td>商品名称</td>
-                            <td>商品单价</td>
-                            <td>购买数量</td>
-                            <td>操作</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr  v-for="(item,index) in list" :key="item.id">
-                            <td>{{index+1}}</td>
-                            <td>{{item.name}}</td>
-                            <td>{{item.price}}</td>
-                            <td><button @click="handleClick(index,-1)" :disabled="item.count===1">-</button>{{item.count}}<button  @click="handleClick(index,1)" >+</button></td>
-                            <td><button @click="handleRemove(index)" >移除</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div>总价：￥{{totalPrice}}</div>
-            </template>
-            <div v-else>购物车为空</div>
+            <table>
+                <tbody is="my-conpent">
+
+                </tbody>
+            </table>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="js/index.js"></script>

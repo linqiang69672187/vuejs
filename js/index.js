@@ -1,3 +1,7 @@
+Vue.component('my-conpent',{
+    template:'<div>这里是组件内容</div>'
+})
+
 var app = new Vue({
     el:"#app",
     data:{
