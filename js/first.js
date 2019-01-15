@@ -38,3 +38,14 @@ var app2x = new Vue({
         }
     }
 })
+
+var ppt=new Vue({
+    el:"#ford",
+    data:{
+        books:[
+            {name:'《Vue.js实战》'},
+            {name:'《Javascript实战》'},
+            {name:'《Javascript高级程序设计》'}
+        ]
+    }
+})

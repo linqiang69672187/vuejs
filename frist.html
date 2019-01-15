@@ -25,6 +25,11 @@
         </template>
         <button @click="handleToggleClick">输入切换类型</button>
     </div>
+    <div id="ford">
+        <ul>
+            <li v-for="book in books">{{book.name}}</li>
+        </ul>
+    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="Js/first.js"></script>
