@@ -1,35 +1,6 @@
-Vue.component('my-conpent',{
-    template:'<div>这里是组件内容</div>'
-})
-
 var app = new Vue({
-    el:"#app",
+    el:'#app',
     data:{
-        list:[
-            {id:1,name:"Iphone 7",price:6188,count:1},
-            {id:2,name:"Ipad" ,price:5188,count:1},
-            {id:3,name:"MacBook Pro" ,price:21488,count:1},
-    ]
+      value:5
     },
-    computed: {
-        totalPrice:function(){
-            let total=0;
-            for (let i=0;i<this.list.length;i++){
-                var item = this.list[i];
-                total+=item.price*item.count;
-            }
-            return total.toString().replace(/(\d)(?=(\d{3})+$)/g,'$1,');
-        }
-    },
-    methods: {
-        handleClick:function(index,method){     
-            var item = this.list[index];
-            if(method==-1&& item.count==1) return;
-            item.count+=method;
-        },
-        handleRemove:function(index){
-            this.list.splice(index,1);
-        }
-    },
-
-})
+});

@@ -2,18 +2,14 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>购物车示例</title>
-        <link ref="stylesheet" type="text/css" href="style.css">
+        <title>数字输入组件</title>
     </head>
     <body>
         <div id="app" v-cloak>
-            <table>
-                <tbody is="my-conpent">
-
-                </tbody>
-            </table>
+            <input-number v-model="value" :max="10" :min="0"/>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="js/input-number.js"></script>
         <script src="js/index.js"></script>
     </body>
 </html>
