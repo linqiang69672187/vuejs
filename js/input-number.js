@@ -1,13 +1,9 @@
 Vue.component('input-number',{
     template:'\
     <div class="input-number">\
-    <input \
-        type="text"\
-        :value="currentValue"\
-        @change="handleChange">\
+    <input type="text" :value="currentValue"  @change="handleChange">\
     <button  @click="handleDown" :disabled="currentValue<= min">-</button>\
     <button  @click="handleUp" :disabled="currentValue>= max">+</button>\
-   \
     </div>',
     props:{
         max:{
@@ -15,11 +11,11 @@ Vue.component('input-number',{
             default:Infinity
         },
         min:{
-            type:number,
+            type:Number,
             default:-Infinity
         },
         value:{
-            type:number,
+            type:Number,
             default:0
         }
     },
@@ -53,8 +49,10 @@ Vue.component('input-number',{
         },
         handleChange:function(event){
             var val = event.target.value.trim();
-            this.currentValue = val;
+            
             if (isValueNumber(val)){
+                val = Number(val)
+                this.currentValue = val;
                 if (val>this.max){
                     this.currentValue=this.max;
                 }
