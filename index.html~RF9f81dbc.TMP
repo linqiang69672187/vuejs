@@ -15,8 +15,8 @@
                              <td>{{index+1}}</td>
                              <td>{{li.name}}</td>
                              <td>{{li.price}}</td>
-                             <td><input type="button" value="-" @click="handleRd(index)" :disabled="li.count==0" />{{li.count}}<input type="button"  @click="handleAdd(index)" value="+" /></td>
-                             <td><input type="button" value="操作" @click="remove(index)" /></td>
+                             <td><input type="button" value="-" @click="handleRd(index)" />{{li.count}}<input type="button"  @click="handleAdd(index)" value="+" /></td>
+                             <td><input type="button" value="操作" /></td>
                          </tr>
                          <tr>
                              <td colspan="5">{{total}}</td>
